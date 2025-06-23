@@ -1,0 +1,35 @@
+{{!--
+    Parameters:
+    * footerText (text)
+--}}
+
+<footer class="gh-foot gh-outer">
+    <div class="gh-foot-inner gh-inner">
+        <nav class="gh-foot-menu">
+            {{navigation type="secondary"}}
+            
+            <div class="gh-social-icons">
+                <a href="https://linkedin.com/in/doronkatz" target="_blank" rel="noopener noreferrer" class="gh-social-link">
+                    {{> "icons/linkedin"}}
+                    <span class="sr-only">LinkedIn</span>
+                </a>
+                <a href="https://instagram.com/tpmpodcastshow" target="_blank" rel="noopener noreferrer" class="gh-social-link">
+                    {{> "icons/instagram"}}
+                    <span class="sr-only">Instagram</span>
+                </a>
+                <a href="https://x.com/tpmpodcastshow" target="_blank" rel="noopener noreferrer" class="gh-social-link">
+                    {{> "icons/twitter"}}
+                    <span class="sr-only">X (Twitter)</span>
+                </a>
+            </div>
+        </nav>
+
+        <div class="gh-copyright">
+            {{#unless footerText}}
+                {{@site.title}} &copy; {{date format="YYYY"}}
+            {{else}}
+                {{footerText}}
+            {{/unless}}
+        </div>
+    </div>
+</footer>
